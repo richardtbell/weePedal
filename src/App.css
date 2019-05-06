@@ -18,9 +18,41 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-header-image {
+  background-color: rgba(32, 31, 34, 1);
+  background-image: url("./img/pedalLogo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
 .App-link {
   color: #61dafb;
+}
+.collection-card .stripe.light {
+  background-color: rgba(255,255,255,.7);
+}
+.collection-card .stripe {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.image-text{
+  margin-top: 0;
+    margin-bottom: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+h2{
+  color: #29b6f6;
+}
+
+.foot{
+  color: #29b6f6 !important; 
 }
 
 @keyframes App-logo-spin {
