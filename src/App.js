@@ -8,6 +8,7 @@ import AboutUs from './components/AboutUs'
 import OnlineBooking from './components/OnlineBooking'
 import ContactPage from './components/ContactUs'
 import FooterPage from './components/FooterPage'
+import OurPolicy from './components/OurPolicy'
 import { Footer } from 'mdbreact';
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <AboutUs />
        <OurTours />
        <OnlineBooking />
+       <OurPolicy />
        <ContactPage />
        <FooterPage />
     </div>

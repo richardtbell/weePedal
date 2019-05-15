@@ -4,6 +4,7 @@ import falkirkWheel from '../img/the-falkirk-wheel-james-lamb.jpg'
 import roslynChapel from '../img/roslynChapel.jpg'
 import craigmillar from '../img/Craigmillar.jpg'
 import mussleburgh from '../img/musselburgh.jpg'
+import linlithgow from '../img/linlithgow-palace-britain-explorer.jpg'
 import TourModal from './TourModal'
 class OurTours extends Component{
   state = {
@@ -12,14 +13,18 @@ class OurTours extends Component{
   };
 
   toggle = (e) => {
-      console.log(e.target.name)
     this.setState({
         section: e.target.name,
       modalOpen: !this.state.modalOpen
     });
   }
+  
 render(){
+  const style ={
+    height: '170px'
+  }
     return (
+      <div id="tours">
         <Container>
         <section className="text-center my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
@@ -94,6 +99,26 @@ render(){
               <MDBCard collection className="z-depth-1-half">
                 <div className="view zoom">
                   <img
+                    src={linlithgow}
+                    style={style}
+                    className="img-fluid"
+                    alt=""
+                  />
+                  <div className="stripe light">
+                  {/* <a href="#!" onClick={this.toggle}>
+                    <p className="image-text">
+                      Edinburgh to Falkirk Wheel  <Fa icon="angle-right" />
+                      </p>
+                    </a> */}
+                      <MDBBtn color="primary" outline rounded name="OUT" onClick={this.toggle}> Outlander Adventure <Fa icon="angle-right" /></MDBBtn>
+                  </div>
+                </div>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
+              <MDBCard collection className="z-depth-1-half">
+                <div className="view zoom">
+                  <img
                     src={falkirkWheel}
                     className="img-fluid"
                     alt=""
@@ -113,6 +138,7 @@ render(){
         </section>
         <TourModal modalOpen={this.state.modalOpen} toggleModal={this.toggle} sectionToRender={this.state.section} />
         </Container>
+        </div>
       );
 }
 

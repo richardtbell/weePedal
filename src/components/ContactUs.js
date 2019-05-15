@@ -3,6 +3,7 @@ import {  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput } from "mdbrea
 
 const ContactPage = () => {
   return (
+    <div id="contactUs">
     <MDBContainer>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact us
@@ -74,6 +75,7 @@ const ContactPage = () => {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </div>
   );
 }
 

@@ -12,6 +12,7 @@ render(){
         colour: '#29b6f6'
     }
     return (
+      <div id="book">
         <Container>
         <section className="text-center my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
@@ -26,6 +27,7 @@ render(){
          
         </section>
         </Container>
+        </div>
       );
 }
 
