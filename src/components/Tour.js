@@ -1,0 +1,36 @@
+import React from 'react'
+import {
+    MDBRow,
+    MDBCol,
+    MDBCardBody,
+    MDBIcon,
+    MDBBtn,
+    MDBView,
+    MDBMask,
+    MDBContainer
+  } from "mdbreact";
+  import ReactMarkdown from "react-markdown";
+const Tour = (props) =>{
+    const imageUrl= "http://content.aweepedal.com" + props.image.url
+    console.log(imageUrl)
+    return(
+        <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+        <MDBView className="overlay rounded z-depth-1" waves>
+          <img src={imageUrl} alt="" className="img-fluid" />
+          <a href="#!">
+            <MDBMask overlay="white-slight" />
+          </a>
+        </MDBView>
+
+        <MDBCardBody className="pb-0">
+          <h4 className="font-weight-bold my-3">{props.name}</h4>
+          <p className="grey-text">
+          <ReactMarkdown source={props.blurb} />
+          </p>
+          <MDBBtn outline color="indigo">Book Tour</MDBBtn>
+        </MDBCardBody>
+      </MDBCol>
+    )
+}
+
+export default Tour

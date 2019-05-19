@@ -1,43 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import Navigation from './components/Navigation'
-import Header from './components/Header'
+import ContactUs from './components/ContactUs'
+import FooterPage from './components/FooterPage'
+import OnlineBooking from './components/OnlineBooking'
+import HomePage from './components/HomePage'
+import OurPolicy from './components/OurPolicy'
 import OurTours from './components/OurTours'
 import AboutUs from './components/AboutUs'
-import OnlineBooking from './components/OnlineBooking'
-import ContactPage from './components/ContactUs'
-import FooterPage from './components/FooterPage'
-import OurPolicy from './components/OurPolicy'
-import { Footer } from 'mdbreact';
-function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Navigation />
-     
-      <Header />
-      <AboutUs />
-       <OurTours />
-       <OnlineBooking />
-       <OurPolicy />
-       <ContactPage />
-       <FooterPage />
-    </div>
-  );
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route // for later
+} from 'react-router-dom'
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      aboutUsText: "",
+      ourToursText: "",
+      ourPolicyText: ""
+    };
+  }
+  componentWillMount() {
+    fetch("http://content.aweepedal.com/pages")
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        this.getPageTextAndSetState(response);
+      });
+  }
+
+  getPageTextAndSetState = response => {
+    const aboutPage = response.filter(res => res.PageTitle === "About Us");
+    const toursPage = response.filter(res => res.PageTitle === "Our Tours");
+    const ourPolicyPage = response.filter(res => res.PageTitle === "Our Policy");
+    this.setState({
+      aboutUsText: aboutPage[0].PageBlurb,
+      ourToursText: toursPage[0].PageBlurb,
+      ourPolicyText: ourPolicyPage[0].PageBlurb
+    });
+  };
+  render() {
+    return (
+      <div className="App">
+           <Router>
+              <div>
+              <Navigation />
+                <Switch>
+                  <Route path="/" component={HomePage} exact={true} />
+                  <Route path="/aboutUs" render={(props) => <AboutUs {...props} pageData={this.state.aboutUsText}/>}/>
+                  <Route path="/booking" render={(props) => <OnlineBooking {...props} />}/>
+                  <Route path="/ourTours" render={(props) => <OurTours {...props} pageData={this.state.ourToursText} />}/>
+                  <Route path="/contactUs" render={(props) => <ContactUs {...props} />} />
+                  <Route path="/ourPolicy" render={(props) => <OurPolicy {...props} pageData={this.state.ourPolicyText} />} />
+                </Switch>
+                <FooterPage />
+              </div>
+            </Router>
+      </div>
+    );
+  }
+ 
 }
 
 export default App;

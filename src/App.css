@@ -10,7 +10,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 90vh;
 }
 .App-link {
   color: #61dafb;
@@ -48,14 +48,48 @@
 }
 
 h2{
-  color: #29b6f6;
+  color: #282761;
+}
+section{
+  padding-top:10px;
+}
+.contactUs{
+    background-color: #282c34;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.full-height {
+  height: 100%;
+}
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 100px;
 }
 
-.foot{
-  color: #29b6f6 !important; 
+.header-button{
+  margin-right: 100px;
 }
-
-
+@media (max-width: 768px) {
+  .apppage .navbar:not(.top-nav-collapse) {
+    background: #424f95 !important; } }
 
 @keyframes App-logo-spin {
   from {
