@@ -12,7 +12,6 @@ import {
   import ReactMarkdown from "react-markdown";
 const Tour = (props) =>{
     const imageUrl= "http://content.aweepedal.com" + props.image.url
-    console.log(imageUrl)
     return(
         <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
         <MDBView className="overlay rounded z-depth-1" waves>
