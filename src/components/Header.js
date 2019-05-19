@@ -5,10 +5,11 @@ import {
   MDBCol,
   MDBBtn,
   MDBView,
-  MDBContainer
+  MDBContainer, Fa
 } from "mdbreact";
 import "../AppPage.css";
 import logoPedal from "../img/logoPedal.png";
+import {BackgroundHeader, PageHeaderLogo} from '../StyledComponents/StyledComponents'
 
 class Header extends Component {
   state = {
@@ -31,14 +32,17 @@ class Header extends Component {
               
                 <MDBCol md="6" xl="5" className="mt-xl-5">
                   <img src={logoPedal} alt="" className="img-fluid" />
-                  <MDBBtn outline color="indigo" className="header-button">
+                  {/* <MDBBtn outline color="indigo">
                     Find Out More
-                  </MDBBtn>
+                  </MDBBtn> */}
+                  <button class="button button2">Find Out More <Fa icon="arrow-right" className="white-text" /> </button>
                 </MDBCol>
               </MDBRow>
             </MDBContainer>
           </MDBMask>
         </MDBView>
+        {/* <BackgroundHeader ></BackgroundHeader> */}
+        
 
   
       </div>
