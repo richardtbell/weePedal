@@ -15,15 +15,22 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapse: false
+      isOpen: false
     };
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick() {
+  onClick =() => {
     this.setState({
-      collapse: !this.state.collapse
+      isOpen: !this.state.isOpen
     });
+  }
+
+  onClickOfItem() {
+    if(this.state.isOpen){
+     this.onClick()
+    }
+    
   }
 
   render() {
@@ -36,12 +43,12 @@ class Navigation extends React.Component {
               {/* <strong>Navbar</strong> */}
             </MDBNavbarBrand>
             <MDBNavbarToggler onClick={this.onClick} />
-            <MDBCollapse isOpen={this.state.collapse} navbar>
+            <MDBCollapse isOpen={this.state.isOpen} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                  onClick={this.onClickOfItem()}
                     to="/"
                   >
                     Home
@@ -50,7 +57,7 @@ class Navigation extends React.Component {
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                    onClick={this.onClickOfItem()}
                     to="/aboutUs"
                   >
                     About Us
@@ -59,7 +66,7 @@ class Navigation extends React.Component {
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                    onClick={this.onClickOfItem()}
                     to="/ourTours"
                   >
                     Our Tours
@@ -68,7 +75,16 @@ class Navigation extends React.Component {
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                    onClick={this.onClickOfItem()}
+                    to="/explore"
+                  >
+                   Explore Your Edinburgh
+                  </NavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <NavLink
+                    className="nav-link Ripple-parent"
+                    onClick={this.onClickOfItem()}
                     to="/booking"
                   >
                     Online Booking
@@ -77,7 +93,7 @@ class Navigation extends React.Component {
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                    onClick={this.onClickOfItem()}
                     to="/ourPolicy"
                   >
                     Our Policy
@@ -86,7 +102,7 @@ class Navigation extends React.Component {
                 <MDBNavItem>
                   <NavLink
                     className="nav-link Ripple-parent"
-                    onClick={this.onClick}
+                    onClick={this.onClickOfItem()}
                     to="/contactUs"
                   >
                     Contact Us

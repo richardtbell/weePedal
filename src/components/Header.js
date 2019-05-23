@@ -1,53 +1,38 @@
-import React, { Component } from "react";
-import {
-  MDBMask,
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBContainer, Fa
-} from "mdbreact";
-import "../AppPage.css";
-import logoPedal from "../img/logoPedal.png";
-import {BackgroundHeader, PageHeaderLogo} from '../StyledComponents/StyledComponents'
-
+import React, {Component} from 'react'
+import MediaQuery from 'react-responsive';
+import logoPedal from '../img/logoPedal.png'
+import Schrollchor from 'react-scrollchor'
+import { Button } from 'mdbreact';
 class Header extends Component {
-  state = {
-    collapsed: false
-  };
 
-  handleTogglerClick = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
+    render(){
+        const padding ={
+            paddingTop: '130px',
+            height: '300px',
+            marginRight: "1000px"
+          }
 
-  render() {
-    return (
-      <div id="apppage">
-        <MDBView>
-          <MDBMask className="d-flex justify-content-center align-items-center gradient">
-            <MDBContainer>
-              <MDBRow>
-              
-                <MDBCol md="6" xl="5" className="mt-xl-5">
-                  <img src={logoPedal} alt="" className="img-fluid" />
-                  {/* <MDBBtn outline color="indigo">
-                    Find Out More
-                  </MDBBtn> */}
-                  <button class="button button2">Find Out More <Fa icon="arrow-right" className="white-text" /> </button>
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-          </MDBMask>
-        </MDBView>
-        {/* <BackgroundHeader ></BackgroundHeader> */}
-        
-
-  
-      </div>
-    );
-  }
+          const paddingMobile ={
+            paddingTop: '70px',
+            height: '230px'
+          }
+        return(
+            <div >
+                <header className="App-header-image">
+                <MediaQuery query="(min-device-width: 1224px)">
+                <img src={logoPedal}  style={padding} className="img-fluid"  height="220"/>
+                </MediaQuery>
+                {/* <img src={bonoboLogo} className="img-fluid"  height="220"/> */}
+                <MediaQuery query="(max-device-width: 1224px)">
+                <img src={logoPedal} style={paddingMobile} className="img-fluid"  height="220"/>
+                </MediaQuery>
+                {/* <Schrollchor to="#about" animate={{duration: 600, offset:-90}}>
+                  <Button outline color="white">Learn More</Button>
+                  </Schrollchor> */}
+                </header>
+            </div>
+        )
+    }
 }
 
-export default Header;
+export default Header

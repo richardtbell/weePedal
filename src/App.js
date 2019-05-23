@@ -8,6 +8,7 @@ import HomePage from './components/HomePage'
 import OurPolicy from './components/OurPolicy'
 import OurTours from './components/OurTours'
 import AboutUs from './components/AboutUs'
+import Explore from './components/Explore'
 import {
   BrowserRouter as Router,
   Switch,
@@ -52,6 +53,7 @@ class App extends Component {
                 <Switch>
                   <Route path="/" component={HomePage} exact={true} />
                   <Route path="/aboutUs" render={(props) => <AboutUs {...props} pageData={this.state.aboutUsText}/>}/>
+                  <Route path="/explore" render={(props) => <Explore {...props} />}/>
                   <Route path="/booking" render={(props) => <OnlineBooking {...props} />}/>
                   <Route path="/ourTours" render={(props) => <OurTours {...props} pageData={this.state.ourToursText} />}/>
                   <Route path="/contactUs" render={(props) => <ContactUs {...props} />} />
