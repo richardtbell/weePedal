@@ -40,7 +40,7 @@ class OurTours extends Component {
           </p>
 
           <MDBRow className="text-center">
-            {this.state.tours.map((tour, i) => <Tour key={i} blurb={tour.TourBlurb} image={tour.TourImage} name={tour.TourName}/>)}
+            {this.state.tours.map((tour, i) => <Tour key={i} blurb={tour.TourBlurb} image={tour.TourImage} name={tour.TourName} bookingUrl={tour.BookingLink}/>)}
           </MDBRow>
         </section>
       </MDBContainer>

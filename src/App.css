@@ -11,8 +11,7 @@
 
 
 .App-header-image {
-  background-color: rgba(32, 31, 34, 1);
-  background-image: url("./img/Bridges_landing_page.jpg");
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/IMG_3853.jpeg"); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

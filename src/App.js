@@ -21,7 +21,8 @@ class App extends Component {
     this.state = {
       aboutUsText: "",
       ourToursText: "",
-      ourPolicyText: ""
+      ourPolicyText: "",
+      exploreEdinburghText: ""
     };
   }
   componentWillMount() {
@@ -38,10 +39,12 @@ class App extends Component {
     const aboutPage = response.filter(res => res.PageTitle === "About Us");
     const toursPage = response.filter(res => res.PageTitle === "Our Tours");
     const ourPolicyPage = response.filter(res => res.PageTitle === "Our Policy");
+    const exploreEdinburghPage = response.filter(res => res.PageTitle === "Explore Your Edinburgh");
     this.setState({
       aboutUsText: aboutPage[0].PageBlurb,
       ourToursText: toursPage[0].PageBlurb,
-      ourPolicyText: ourPolicyPage[0].PageBlurb
+      ourPolicyText: ourPolicyPage[0].PageBlurb,
+      exploreEdinburghText: exploreEdinburghPage[0].PageBlurb
     });
   };
   render() {
@@ -53,8 +56,7 @@ class App extends Component {
                 <Switch>
                   <Route path="/" component={HomePage} exact={true} />
                   <Route path="/aboutUs" render={(props) => <AboutUs {...props} pageData={this.state.aboutUsText}/>}/>
-                  <Route path="/explore" render={(props) => <Explore {...props} />}/>
-                  <Route path="/booking" render={(props) => <OnlineBooking {...props} />}/>
+                  <Route path="/explore" render={(props) => <Explore {...props} pageData={this.state.exploreEdinburghText}/>}/>
                   <Route path="/ourTours" render={(props) => <OurTours {...props} pageData={this.state.ourToursText} />}/>
                   <Route path="/contactUs" render={(props) => <ContactUs {...props} />} />
                   <Route path="/ourPolicy" render={(props) => <OurPolicy {...props} pageData={this.state.ourPolicyText} />} />

@@ -85,15 +85,6 @@ class Navigation extends React.Component {
                   <NavLink
                     className="nav-link Ripple-parent"
                     onClick={this.onClickOfItem()}
-                    to="/booking"
-                  >
-                    Online Booking
-                  </NavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <NavLink
-                    className="nav-link Ripple-parent"
-                    onClick={this.onClickOfItem()}
                     to="/ourPolicy"
                   >
                     Our Policy
@@ -129,6 +120,15 @@ class Navigation extends React.Component {
                           target="_blank"
                         >
                           <Fa icon="instagram" className="white-text" />
+                        </a>
+                      </li>
+                      <li className="list-inline-item">
+                        <a
+                          className="btn-floating btn-lg btn-in mx-1"
+                          href="https://twitter.com/aweepedal?lang=en-gb"
+                          target="_blank"
+                        >
+                          <Fa icon="twitter" className="white-text" />
                         </a>
                       </li>
                     </ul>

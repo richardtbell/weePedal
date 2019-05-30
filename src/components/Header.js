@@ -8,13 +8,11 @@ class Header extends Component {
     render(){
         const padding ={
             paddingTop: '130px',
-            height: '300px',
-            marginRight: "1000px"
+            height: '600px'
           }
 
           const paddingMobile ={
-            paddingTop: '70px',
-            height: '230px'
+            paddingTop: '200px'
           }
         return(
             <div >

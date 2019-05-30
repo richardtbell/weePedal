@@ -26,7 +26,9 @@ const Tour = (props) =>{
           <p className="grey-text">
           <ReactMarkdown source={props.blurb} />
           </p>
-          <MDBBtn outline color="indigo">Book Tour</MDBBtn>
+           <a href={props.bookingUrl} target="_blank">
+           <MDBBtn outline color="indigo">Book Tour</MDBBtn>
+          </a>
         </MDBCardBody>
       </MDBCol>
     )
