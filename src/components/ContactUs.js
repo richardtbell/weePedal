@@ -1,5 +1,5 @@
 import React from "react";
-import {  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
+import {  MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 import "../App.css";
 const ContactPage = () => {
   return (

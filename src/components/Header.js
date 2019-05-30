@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import MediaQuery from 'react-responsive';
 import logoPedal from '../img/logoPedal.png'
-import Schrollchor from 'react-scrollchor'
-import { Button } from 'mdbreact';
 class Header extends Component {
 
     render(){

@@ -3,7 +3,6 @@ import './App.css';
 import Navigation from './components/Navigation'
 import ContactUs from './components/ContactUs'
 import FooterPage from './components/FooterPage'
-import OnlineBooking from './components/OnlineBooking'
 import HomePage from './components/HomePage'
 import OurPolicy from './components/OurPolicy'
 import OurTours from './components/OurTours'

@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import {
   MDBRow,
-  MDBCol,
-  MDBCardBody,
-  MDBIcon,
-  MDBBtn,
-  MDBView,
-  MDBMask,
   MDBContainer
 } from "mdbreact";
 import ReactMarkdown from "react-markdown";
