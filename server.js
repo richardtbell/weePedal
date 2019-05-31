@@ -12,7 +12,14 @@ server.use(bodyParser.json());
 
 server.use(router);
 
-server.use("/", express.static(path.join(__dirname, "build")));
+
+server.use(express.static(path.join(__dirname, 'build')));
+
+// server.use(express.static(path.join(__dirname, 'build')));
+
+server.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 server.listen(config.port, config.host, () => {
   console.info("Express listening on port", config.port);

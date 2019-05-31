@@ -11,7 +11,7 @@ class FooterPage extends React.Component {
                 </Container>
                 <div className="footer-copyright text-center py-3">
                     <Container fluid>
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://jciedinburgh.org.uk/"> A Wee Pedal </a>
+                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://aweepedal.com/"> A Wee Pedal </a>
                         
                     </Container>
                     <Container fluid>
