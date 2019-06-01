@@ -1,8 +1,19 @@
 import React from 'react'
 import { Container} from 'mdbreact'
 import ReactMarkdown from "react-markdown";
+import {MDBCol, MDBRow, MDBView} from 'mdbreact'
 const Explore = ({pageData}) =>{
 
+  function Image(props) {
+    
+    return (
+
+      
+        <img {...props} style={{height:'200px'}} className="column"/>
+
+      
+    )
+  }
     return(
         <Container>
         <div id="about">
@@ -11,7 +22,7 @@ const Explore = ({pageData}) =>{
               Explore your Edinburgh
             </h2>
             <p className="grey-text text-center w-responsive mx-auto mb-5">
-            <ReactMarkdown source={pageData} /> 
+            <ReactMarkdown source={pageData}  renderers={{image: Image}} /> 
             </p>
           </section>
         </div>

@@ -1,5 +1,7 @@
 import styled, { keyframes, css } from "styled-components";
 import bridges from '../img/Bridges_landing_page.jpg'
+import hills from '../img/IMG_3853.jpeg'
+import mobileHills from '../img/mobileBackground.png'
 import logo from '../img/logoPedal.png'
 const sizes = {
     desktop: 992,
@@ -19,17 +21,19 @@ const sizes = {
   }, {})
 
   export const BackgroundHeader = styled.div`
-background-image: url(${bridges});
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: calc(10px + 2vmin);
-color: white;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url(./img/IMG_3853.jpeg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  ${media.tablet`
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/IMG_3853.jpeg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  `}
+
 
 `
 

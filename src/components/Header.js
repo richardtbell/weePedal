@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import MediaQuery from 'react-responsive';
 import logoPedal from '../img/logoPedal.png'
+import { MDBBtn} from 'mdbreact'
 class Header extends Component {
 
     render(){
@@ -18,10 +19,12 @@ class Header extends Component {
                 <MediaQuery query="(min-device-width: 1224px)">
                 <img src={logoPedal}  style={padding} className="img-fluid"  height="220"/>
                 </MediaQuery>
-                {/* <img src={bonoboLogo} className="img-fluid"  height="220"/> */}
                 <MediaQuery query="(max-device-width: 1224px)">
                 <img src={logoPedal} style={paddingMobile} className="img-fluid"  height="220"/>
                 </MediaQuery>
+                 <MDBBtn outline color="indigo">
+                   Find Out More
+                 </MDBBtn>
                 {/* <Schrollchor to="#about" animate={{duration: 600, offset:-90}}>
                   <Button outline color="white">Learn More</Button>
                   </Schrollchor> */}
