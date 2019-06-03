@@ -4,6 +4,8 @@ const express = require("express");
 const helmet = require("helmet");
 const config = require("./config");
 const path = require("path");
+
+const {emailRouter, captchaRouter }= require('./api')
 const server = express();
 const router = express.Router();
 
@@ -12,6 +14,8 @@ server.use(bodyParser.json());
 
 server.use(router);
 
+
+server.use('/api', emailRouter, captchaRouter);
 
 server.use(express.static(path.join(__dirname, 'build')));
 
