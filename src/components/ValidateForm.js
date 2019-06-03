@@ -153,7 +153,7 @@ class ValidateForm extends React.Component {
                 
                 <ReCAPTCHA
                 ref="recaptcha"
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                sitekey="6LdXpqYUAAAAAGDUJOqXVZrDWCVTFqwRCP9iwQxH"
                 onChange={this.verifyCaptcha}
               />
                  <MDBBtn outline color="indigo" type="submit">
