@@ -99,6 +99,15 @@ class Navigation extends React.Component {
                     Contact Us
                   </NavLink>
                 </MDBNavItem>
+                <MDBNavItem>
+                  <NavLink
+                    className="nav-link Ripple-parent"
+                    onClick={this.onClickOfItem()}
+                    to="/testimonials"
+                  >
+                    Testimonials
+                  </NavLink>
+                </MDBNavItem>
               </MDBNavbarNav>
               <MDBNavbarNav right>
                 <NavItem>

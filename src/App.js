@@ -8,6 +8,7 @@ import OurPolicy from './components/OurPolicy'
 import OurTours from './components/OurTours'
 import AboutUs from './components/AboutUs'
 import Explore from './components/Explore'
+import Testimonials from './components/Testimonials'
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +25,7 @@ class App extends Component {
       exploreEdinburghText: ""
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     fetch("http://content.aweepedal.com/pages")
       .then(response => {
         return response.json();
@@ -59,6 +60,7 @@ class App extends Component {
                   <Route path="/ourTours" render={(props) => <OurTours {...props} pageData={this.state.ourToursText} />}/>
                   <Route path="/contactUs" render={(props) => <ContactUs {...props} />} />
                   <Route path="/ourPolicy" render={(props) => <OurPolicy {...props} pageData={this.state.ourPolicyText} />} />
+                  <Route path="/testimonials" render={(props) => <Testimonials {...props} />} />
                 </Switch>
                 <FooterPage />
               </div>
