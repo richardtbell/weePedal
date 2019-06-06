@@ -14,7 +14,7 @@ class OurTours extends Component {
   }
 
   componentWillMount() {
-    fetch("http://content.aweepedal.com/tours")
+    fetch("https://content.aweepedal.com/tours")
       .then(response => {
         return response.json();
       })

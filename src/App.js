@@ -26,7 +26,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://content.aweepedal.com/pages")
+    fetch("https://content.aweepedal.com/pages")
       .then(response => {
         return response.json();
       })

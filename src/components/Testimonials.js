@@ -12,7 +12,7 @@ class TestimonialsPage extends Component {
   }
 
   componentDidMount(){
-    fetch("http://content.aweepedal.com/testimonials")
+    fetch("https://content.aweepedal.com/testimonials")
       .then(response => {
         return response.json();
       })
