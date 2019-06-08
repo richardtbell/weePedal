@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Container } from "mdbreact";
 
 import ReactMarkdown from "react-markdown";
-
+function Image(props) {
+  return <img {...props} style={{ height: "500px", paddingBottom: "100px" }} className="columnCenter" />;
+}
 class AboutUs extends Component {
   render() {
     return (
@@ -13,7 +15,7 @@ class AboutUs extends Component {
               About Us
             </h2>
             <p className="grey-text text-center w-responsive mx-auto mb-5">
-            <ReactMarkdown source={this.props.pageData} />
+              <ReactMarkdown source={this.props.pageData} renderers={{image: Image}} />
             </p>
           </section>
         </div>

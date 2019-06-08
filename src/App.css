@@ -105,6 +105,10 @@ section{
   clear: both;
   display: table;
 }
+
+.columCentre {
+  float: centre;
+}
 @media (max-width: 768px) {
   .apppage .navbar:not(.top-nav-collapse) {
     background: #424f95 !important; } }
