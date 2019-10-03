@@ -1,12 +1,5 @@
 import axios from "axios";
 
-export const getEvents = () => {
-  return axios
-    .get(`/api/getAll`)
-    .then(resp => resp.data)
-    .catch(console.error);
-};
-
 export const sendEmail = (name, email, subject, message) => {
   return axios
     .post(`/api/sendEmail`, {
@@ -31,54 +24,3 @@ export const verifyCaptcha = response => {
     .catch(console.error);
 };
 
-export const uploadFile = (formData) => {
- return axios.post(`api/uploadFile`, formData, {
-    headers: {
-      'Content-Type': 'multipart/form-data'
-    }
-  })
-  .then(response => response.data)
-  .catch(console.error);
-}
-
-export const sendApplicationAsConsultant = ( name, 
-  email,
-  emailConfirm,
-  expertise,
-  about,
-  fileURL,
-  fileName) => {
-  return axios
-    .post(`/api/sendApplicationAsConsultant`, {
-      name, 
-      email,
-      emailConfirm,
-      expertise,
-      about,
-      fileURL,
-      fileName
-      
-    })
-    .then(resp => resp.data)
-    .catch(console.error);
-};
-
-export const sendApplicationForConsultant = ( name, 
-  email,
-  emailConfirm,
-  companyName,
-  typeOfConsultant,
-  descriptionOfProjectWork) => {
-  return axios
-    .post(`/api/sendApplicationForConsultant`, {
-      name, 
-      email,
-      emailConfirm,
-      companyName,
-  typeOfConsultant,
-  descriptionOfProjectWork
-      
-    })
-    .then(resp => resp.data)
-    .catch(console.error);
-};
