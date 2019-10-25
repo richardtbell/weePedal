@@ -14,6 +14,7 @@ import {
   Switch,
   Route // for later
 } from 'react-router-dom'
+import pages from './content/pages'
 
 class App extends Component {
   constructor() {
@@ -26,25 +27,19 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://content.aweepedal.com/pages")
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        this.getPageTextAndSetState(response);
-      });
+        this.getPageTextAndSetState(pages);
   }
 
   getPageTextAndSetState = response => {
-    const aboutPage = response.filter(res => res.PageTitle === "About Us");
-    const toursPage = response.filter(res => res.PageTitle === "Our Tours");
-    const ourPolicyPage = response.filter(res => res.PageTitle === "Our Policy");
-    const exploreEdinburghPage = response.filter(res => res.PageTitle === "Explore Your Edinburgh");
+    const aboutPage = response.find(res => res.PageTitle === "About Us");
+    const toursPage = response.find(res => res.PageTitle === "Our Tours");
+    const ourPolicyPage = response.find(res => res.PageTitle === "Our Policy");
+    const exploreEdinburghPage = response.find(res => res.PageTitle === "Explore Your Edinburgh");
     this.setState({
-      aboutUsText: aboutPage[0].PageBlurb,
-      ourToursText: toursPage[0].PageBlurb,
-      ourPolicyText: ourPolicyPage[0].PageBlurb,
-      exploreEdinburghText: exploreEdinburghPage[0].PageBlurb
+      aboutUsText: aboutPage.PageBlurb,
+      ourToursText: toursPage.PageBlurb,
+      ourPolicyText: ourPolicyPage.PageBlurb,
+      exploreEdinburghText: exploreEdinburghPage.PageBlurb
     });
   };
   render() {

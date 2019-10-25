@@ -5,25 +5,9 @@ import {
 } from "mdbreact";
 import ReactMarkdown from "react-markdown";
 import Tour from './Tour'
-class OurTours extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tours: []
-    };
-  }
+import tours from '../content/tours'
 
-  componentWillMount() {
-    fetch("https://content.aweepedal.com/tours")
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        this.setState({
-          tours: response
-        });
-      });
-  }
+class OurTours extends Component {
   render() {
     return (
       <MDBContainer>
@@ -34,7 +18,7 @@ class OurTours extends Component {
           </p>
 
           <MDBRow className="text-center">
-            {this.state.tours.map((tour, i) => <Tour key={i} blurb={tour.TourBlurb} image={tour.TourImage} name={tour.TourName} bookingUrl={tour.BookingLink}/>)}
+            {tours.map((tour, i) => <Tour key={i} blurb={tour.TourBlurb} image={tour.TourImage} name={tour.TourName} bookingUrl={tour.BookingLink}/>)}
           </MDBRow>
         </section>
       </MDBContainer>
