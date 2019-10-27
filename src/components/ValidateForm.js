@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Row, Col, MDBBtn } from "mdbreact";
+import { Row, Col, MDBBtn } from "mdbreact";
 import * as api from "../api";
 import ReCAPTCHA from "react-google-recaptcha";
-import{FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
 
-import ErrorMessage from './ErrorMessage'
 class ValidateForm extends React.Component {
   state = {
     name: "",
@@ -37,6 +35,7 @@ class ValidateForm extends React.Component {
   };
 
   isEmailValid = () => {
+    // eslint-disable-next-line no-control-regex
     const emailRegex = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
     return this.state.email.length>0 && emailRegex.test(this.state.email) ? true : false;
    
@@ -50,6 +49,7 @@ class ValidateForm extends React.Component {
     return subjectRegex.test(this.state.subject) ? true : false;
   }
   isMessageValid = () => {
+    // eslint-disable-next-line no-useless-escape
     const messageRegex = /^[a-zA-Z0-9!*@.()\/+-]{2,250}$/;
     return messageRegex.test(this.state.message) ? true : false;
   }

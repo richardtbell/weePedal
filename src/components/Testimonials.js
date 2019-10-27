@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBTestimonial,  MDBIcon } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import ReactMarkdown from 'react-markdown'
 
 class TestimonialsPage extends Component {

@@ -3,6 +3,7 @@ import { Container } from "mdbreact";
 
 import ReactMarkdown from "react-markdown";
 function Image(props) {
+  // eslint-disable-next-line jsx-a11y/alt-text
   return <img {...props} style={{ height: "500px", paddingBottom: "100px" }} className="columnCenter" />;
 }
 class AboutUs extends Component {

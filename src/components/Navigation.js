@@ -118,6 +118,7 @@ class Navigation extends React.Component {
                           className="btn-floating btn-lg btn-fb mx-1"
                           href="https://www.facebook.com/aweepedal/"
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <Fa icon="facebook" className="white-text" />
                         </a>
@@ -127,6 +128,7 @@ class Navigation extends React.Component {
                           className="btn-floating btn-lg btn-in mx-1"
                           href="https://www.instagram.com/aweepedal/"
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <Fa icon="instagram" className="white-text" />
                         </a>
@@ -136,6 +138,7 @@ class Navigation extends React.Component {
                           className="btn-floating btn-lg btn-in mx-1"
                           href="https://twitter.com/aweepedal?lang=en-gb"
                           target="_blank"
+                          rel="noopener noreferrer"
                         >
                           <Fa icon="twitter" className="white-text" />
                         </a>

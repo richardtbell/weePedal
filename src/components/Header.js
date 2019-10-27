@@ -18,10 +18,10 @@ class Header extends Component {
             <div >
                 <header className="App-header-image">
                 <MediaQuery query="(min-device-width: 1224px)">
-                <img src={logoPedal}  style={padding} className="img-fluid"  height="220"/>
+                <img src={logoPedal}  style={padding} className="img-fluid"  height="220" alt="A wee pedal logo"/>
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
-                <img src={logoPedal} style={paddingMobile} className="img-fluid"  height="220"/>
+                <img src={logoPedal} style={paddingMobile} className="img-fluid"  height="220" alt="A wee pedal logo"/>
                 </MediaQuery>
               <div className="button">
                  

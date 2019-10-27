@@ -1,19 +1,16 @@
 import React from 'react'
 import { Container} from 'mdbreact'
 import ReactMarkdown from "react-markdown";
-import {MDBCol, MDBRow, MDBView} from 'mdbreact'
+function Image(props) {
+  
+  return (
+      // eslint-disable-next-line jsx-a11y/alt-text
+      <img {...props} style={{height:'200px'}} className="column"/>
+  )
+}
+
 const Explore = ({pageData}) =>{
 
-  function Image(props) {
-    
-    return (
-
-      
-        <img {...props} style={{height:'200px'}} className="column"/>
-
-      
-    )
-  }
     return(
         <Container>
         <div id="about">

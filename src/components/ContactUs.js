@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
+import { MDBContainer } from "mdbreact";
 import "../App.css";
 import ValidateForm from './ValidateForm'
 import ThankYou from './ThankYou'

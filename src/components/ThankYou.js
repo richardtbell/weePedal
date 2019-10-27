@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from "mdbreact";
+import { Container } from "mdbreact";
 class ThankYou extends Component{
     
     render(){
