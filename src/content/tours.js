@@ -1,7 +1,7 @@
 const tours =[
   {
     id: 1,
-    TourName: "Edinburgh to Portobello",
+    TourName: "Cycle tour to the coast",
     TourBlurb:
       "Energy rating: Easy to Moderate. Families welcome if confident on a bike\r\n\r\nDistance: 12 miles\r\n\r\nTerrain: Short distances on roads. Traffic free cycle paths. All paved. \r\n\r\nWe shall start by cycling right beside Arthur's Seat, Edinburgh's extinct volcano and through Duddinston Village, passing Scotland's oldest surviving pub of 1860. We then cycle onto the National Cycle Network 1 path to Portobello beach. There we shall stop for a refreshment outside if sunny or indoors if the Scottish weather is against us! On our return journey we take\r\nthe Victorian-era Innocent Tunnel which was built in 1860 and goes underneath Holyrood Park. ",
     created_at: "2019-05-19T14:47:30.000Z",
@@ -145,7 +145,7 @@ const tours =[
     },
     {
       id: 7,
-      TourName: "Edinburgh to Falkirk Wheel",
+      TourName: "Edinburgh to Kelpies and Falkirk Wheel",
       TourBlurb:
         "Energy rating: Moderate to hard \r\n \r\nDistance: 60 miles\r\n\r\nTerrain: Mostly flat. short distance on roads, Paved cycle path, gravel, cobblestone, grit\r\n\r\nThis is a wonderful day out on the bikes if you are looking for a longer ride.\r\nWe shall join the start of the Union Canal which was first in use in 1832 and cycle alongside the canal to Falkirk with scenic rest / refreshment stops en route. You can visit and go on the impressive Falkirk Wheel in action (entrance fee not included) and experience engineering at it’s very best connecting the Forth and Clyde Canal. \r\nThere is a well serviced cafe at The Falkirk Wheel so you can have lunch there or stop 3/4 of way back at The Bridge Inn in Ratho (8 miles outside Edinburgh ) \r\n",
       created_at: "2019-05-19T14:48:56.000Z",
@@ -178,7 +178,7 @@ const tours =[
         "https://app.acuityscheduling.com/schedule.php?owner=17728702&appointmentType=10213672",
       TourImage: {
         id: 26,
-        name: "IMG_3853.jpg",
+        name: "BackgroundAndTour-BespokeSupportLedRides.png.jpg",
         hash: "99e9e1e65056460ea73b68f6b7e0dd44",
         sha256: "zS8qSEp1W5xmetcMsnwSmcsxJdJtJ81m2ZIyTLOP-es",
         ext: ".jpg",

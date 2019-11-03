@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "mdbreact";
+import { AboutUsFirst } from "../img/AboutUs-first.jpg"
+import { IMG_3853 } from "../img/BackgroundAndTour-BespokeSupportLedRides.png.jpg"
 
 import ReactMarkdown from "react-markdown";
 function Image(props) {
@@ -18,6 +20,7 @@ class AboutUs extends Component {
             <p className="grey-text text-center w-responsive mx-auto mb-5">
               <ReactMarkdown source={this.props.pageData} renderers={{image: Image}} />
             </p>
+            <Image src={AboutUsFirst} alt='AboutUsFirst'/>
           </section>
         </div>
       </Container>

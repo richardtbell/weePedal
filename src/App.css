@@ -129,7 +129,7 @@ section{
 @media  (min-width: 1024px) and (max-width: 1881px) {
   
   .App-header-image {
-    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/IMG_3853.jpeg"); 
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/BackgroundAndTour-BespokeSupportLedRides.png.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -141,7 +141,7 @@ section{
 @media (min-width: 481px) and (max-width: 1024px) {
   
   .App-header-image {
-    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/mobileBackground.png"); 
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/MobileBackgroundAndTour-BespokeSupportLedRides.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -158,7 +158,7 @@ section{
 @media (min-width: 320px) and (max-width: 480px) {
   
   .App-header-image {
-    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/mobileBackground.png"); 
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/MobileBackgroundAndTour-BespokeSupportLedRides.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
