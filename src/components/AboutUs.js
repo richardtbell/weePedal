@@ -6,6 +6,10 @@ import AboutUsChild_Protection_in_Sport_and_Active_Leisure from '../img/AboutUsC
 import AboutUsWWVS from '../img/AboutUsWWVS.jpg'
 import AboutUsVelotech from '../img/AboutUsVelotech.jpg'
 import { SmallImage, Image } from "../StyledComponents/StyledComponents";
+import certificate from '../img/certificate.jpg'
+import ChildProtectionInSportAndActiveLeisure from '../img/ChildProtectionInSportAndActiveLeisure.jpg'
+import OutdoorFirstAidCertificate from '../img/OutdoorFirstAidCertificate.jpg'
+import RideLeaderL1 from '../img/RideLeaderL1.jpg'
 
 class AboutUs extends Component {
   render() {
@@ -37,6 +41,10 @@ class AboutUs extends Component {
                 <SmallImage src={AboutUsChild_Protection_in_Sport_and_Active_Leisure} alt='Child Protection in Sport and Active Leisure'/>
                 <SmallImage src={AboutUsWWVS} alt='Working with Visit Scotland'/>
                 <SmallImage src={AboutUsVelotech} alt='Bike maintenance certificate'/>
+                <SmallImage src={certificate} alt='Mountain Bike Leadership certificate'/>
+                <SmallImage src={ChildProtectionInSportAndActiveLeisure} alt='Child Protection in Sports and Active Leasure certificate'/>
+                <SmallImage src={OutdoorFirstAidCertificate} alt='Outdoor first aid certificate'/>
+                <SmallImage src={RideLeaderL1} alt='Ride leadership level 1 certificate'/>
             </div>
           </section>
         </div>
