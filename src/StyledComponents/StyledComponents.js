@@ -70,3 +70,8 @@ height: 100px;
 display: inline-block;
 margin-right: 10px;
 `
+
+export const Image = styled.img`
+height: ${props => props.height}px;
+padding-bottom: 100px;
+`
