@@ -2,16 +2,10 @@ import React from "react";
 import { MDBCol, MDBCardBody, MDBBtn, MDBView, MDBMask } from "mdbreact";
 import ReactMarkdown from "react-markdown";
 const Tour = props => {
-  const imageUrl = props.image.url;
+  
   return (
     <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-      <MDBView className="overlay rounded z-depth-1" waves>
-        <img src={imageUrl} alt="" className="img-fluid" />
-        <a href="#!">
-          <MDBMask overlay="white-slight" />
-        </a>
-      </MDBView>
-      <img src={imageUrl} alt="" className="img-fluid" />
+      <img src={props.image.src} alt={props.image.alt} className="img-fluid" />
 
       <MDBCardBody className="pb-0">
         <h4 className="font-weight-bold my-3">{props.name}</h4>
