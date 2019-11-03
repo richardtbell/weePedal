@@ -64,3 +64,9 @@ max-width: 65.875em;
   color: #FFF8F8;padding-left:10px;
   padding-top:10px;`}
 `
+
+export const SmallImage = styled.img`
+height: 100px;
+display: inline-block;
+margin-right: 10px;
+`

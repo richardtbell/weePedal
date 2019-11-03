@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Container } from "mdbreact";
-import { AboutUsFirst } from "../img/AboutUs-first.jpg"
-import { IMG_3853 } from "../img/BackgroundAndTour-BespokeSupportLedRides.jpg"
+import AboutUsFirst from "../img/AboutUsFirst.jpg"
+import AboutUs2018LEVEL2_MOUNTAIN_BIKE_LEADER_RGB from '../img/AboutUs2018LEVEL2_MOUNTAIN_BIKE_LEADER_RGB.png'
+import AboutUsChild_Protection_in_Sport_and_Active_Leisure from '../img/AboutUsChild_Protection_in_Sport_and_Active_Leisure.png'
+import AboutUsWWVS from '../img/AboutUsWWVS.jpg'
+import AboutUsVelotech from '../img/AboutUsVelotech.jpg'
+import { SmallImage } from "../StyledComponents/StyledComponents";
 
-import ReactMarkdown from "react-markdown";
 function Image(props) {
   // eslint-disable-next-line jsx-a11y/alt-text
   return <img {...props} style={{ height: "500px", paddingBottom: "100px" }} className="columnCenter" />;
@@ -32,7 +35,13 @@ class AboutUs extends Component {
               <p>Do you want to use the car less? Want to run errands / small shopping trip on your bike? I shall accompany you and give you the skills and confidence so you don’t need to rely on the car for these short trips. </p>
               <p>Contact us if you don’t see what you are looking for. </p>
             </div>
-                <Image src={AboutUsFirst} alt='AboutUsFirst' />
+            <Image src={AboutUsFirst} alt='Leanne cycling' />
+            <div class="grey-text text-center w-responsive mx-auto mb-5">
+                <SmallImage src={AboutUs2018LEVEL2_MOUNTAIN_BIKE_LEADER_RGB} alt='2018 Level 2 Mountain Bike Leader'/>
+                <SmallImage src={AboutUsChild_Protection_in_Sport_and_Active_Leisure} alt='Child Protection in Sport and Active Leisure'/>
+                <SmallImage src={AboutUsWWVS} alt='Working with Visit Scotland'/>
+                <SmallImage src={AboutUsVelotech} alt='Bike maintenance certificate'/>
+            </div>
           </section>
         </div>
       </Container>
