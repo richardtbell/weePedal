@@ -126,43 +126,24 @@ section{
   ##Screen = 1281px to higher resolution desktops
 */
 
-@media  (min-width: 1024px) and (max-width: 1881px) {
+@media  (min-width: 768px) {
   
   .App-header-image {
-    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/BackgroundAndTour-BespokeSupportLedRides.png.jpg"); 
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/BackgroundAndTour-BespokeSupportLedRides.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
   }
   
 }
 
-@media (min-width: 481px) and (max-width: 1024px) {
-  
+@media  (max-width: 768px) {
+
   .App-header-image {
+    min-height: 100vh;
     background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/MobileBackgroundAndTour-BespokeSupportLedRides.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
   }
-  
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  .App-header-image {
-    background: linear-gradient(10deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.51) 100%), url("./img/MobileBackgroundAndTour-BespokeSupportLedRides.png"); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-  }
-  
 }

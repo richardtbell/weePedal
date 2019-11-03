@@ -16,7 +16,7 @@ const tours =[
       ext: ".jpeg",
       mime: "image/jpeg",
       size: "2945.77",
-      url: "/uploads/39a24130bab04905bb9cef565337823d.jpeg",
+      url: "../img/Tour-CycleTourToTheCoast.jpg",
       provider: "local",
       public_id: null,
       created_at: "2019-09-11T14:19:54.000Z",
@@ -178,7 +178,7 @@ const tours =[
         "https://app.acuityscheduling.com/schedule.php?owner=17728702&appointmentType=10213672",
       TourImage: {
         id: 26,
-        name: "BackgroundAndTour-BespokeSupportLedRides.png.jpg",
+        name: "BackgroundAndTour-BespokeSupportLedRides.jpg",
         hash: "99e9e1e65056460ea73b68f6b7e0dd44",
         sha256: "zS8qSEp1W5xmetcMsnwSmcsxJdJtJ81m2ZIyTLOP-es",
         ext: ".jpg",
