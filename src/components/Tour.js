@@ -12,11 +12,14 @@ const Tour = props => {
         <p className="grey-text">
           <ReactMarkdown source={props.blurb} />
         </p>
-        <a href={props.bookingUrl} target="_blank" rel="noopener noreferrer">
+        {
+          props.bookingUrl &&
+        (<a href={props.bookingUrl} target="_blank" rel="noopener noreferrer">
           <MDBBtn outline color="indigo">
             Book Tour
           </MDBBtn>
-        </a>
+        </a>) 
+        }
       </MDBCardBody>
     </MDBCol>
   );

@@ -119,7 +119,7 @@ const tours =[
       TourBlurb:
         "These sessions will be 2 hours long and I can meet you at your house or an agreed location. I will customise the ride for you depending on your little one's riding ability. These will be fun, family friendly and safe sessions. The cost is £60 per family for 2 hours.",
       BookingLink:
-        "https://app.acuityscheduling.com/schedule.php?owner=17728702&appointmentType=10213534",
+        "https://www.eventbrite.co.uk/e/bespoke-cycle-tour-tickets-80042863359",
       TourImage: {
         src: TourFamilySupportRide,
         alt: 'Jack on a bridge'
@@ -129,8 +129,6 @@ const tours =[
       id: 10,
       TourName: "Bike Service to get you back on the road",
       TourBlurb: "",
-      BookingLink:
-        "https://app.acuityscheduling.com/schedule.php?owner=17728702&appointmentType=11309024",
       TourImage: {
         src: TourBikeMaintenance,
         alt: 'Leanne fixing a bike'
